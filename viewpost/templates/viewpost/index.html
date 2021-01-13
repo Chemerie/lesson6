@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react.dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+	<title>My Website</title>
+</head>
+<style>
+	@keyframes hide {
+		0% {
+			opacity: 1;
+			height: 100%;
+			line-height: 100%;
+			padding: 20px;
+			margin-bottom: 10px;
+			}
+		75% {
+			opacity: 0;
+			height: 100%;
+			line-height: 100%;
+			padding: 20px;
+			margin-bottom: 10px;
+			}
+
+		100% {
+			opacity: 0;
+			height: 0px;
+			line-height: 0px;
+			padding: 0px;
+			margin-bottom: 0px;
+		 	}
+	}
+	
+	body{
+		padding-bottom: 50px;
+	}
+	.post{
+		background-color: #77dd11;
+		padding: 20px;
+		margin: 10px;
+		animation-name: hide;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		animation-play-state: paused;
+	}
+</style>
+<script src="{% static 'viewpost/posts.js' %}"></script>
+<body>
+
+</body>
+<div id="posts">
+	
+</div>
+</html>
